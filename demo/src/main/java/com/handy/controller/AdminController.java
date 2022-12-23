@@ -1,5 +1,6 @@
 package com.handy.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +13,7 @@ import com.handy.services.AdminServicesImpl;
 @RestController
 public class AdminController {
 
+	@Autowired
 	private AdminServicesImpl psi;
 	
 	@PostMapping("/addNewProduct")
@@ -19,4 +21,5 @@ public class AdminController {
 		Product p=psi.addNewProduct(product);
 		return new ResponseEntity<>(p,HttpStatus.ACCEPTED);
 	}
+	
 }
