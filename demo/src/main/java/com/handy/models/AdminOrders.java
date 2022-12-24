@@ -16,6 +16,29 @@ public class AdminOrders {
 	private List<ProductConsumer> listOfProduct ;
 	
 	private Integer billAmount;
+	
+	private String status;
+	
+	private String refund;
+
+	
+	
+	
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getRefund() {
+		return refund;
+	}
+
+	public void setRefund(String refund) {
+		this.refund = refund;
+	}
 
 	public Integer getUserId() {
 		return userId;
