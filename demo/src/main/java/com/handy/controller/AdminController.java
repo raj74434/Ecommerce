@@ -40,9 +40,11 @@ public class AdminController {
 	
 	@GetMapping("/getAllOrderRecevidfromUsers")
 	public ResponseEntity<List<AdminOrders>> getAllOrderRecevidfromUsers(){
-		List<AdminOrders> result=	psi.getAllOrderRecevidfromUsers();
+		List<AdminOrders> result=psi.getAllOrderRecevidfromUsers();
 		
 		return new ResponseEntity<>(result,HttpStatus.ACCEPTED);
 	}
+	
+	
 	
 }
