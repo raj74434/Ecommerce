@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class AdminOrders {
@@ -18,6 +19,7 @@ public class AdminOrders {
 	
 	private String userName;
 	
+	@OneToMany
 	private List<ProductConsumer> listOfProduct ;
 	
 	private Integer billAmount;
@@ -34,9 +36,9 @@ public class AdminOrders {
 		return orderId;
 	}
 
-	public void setOrderId(Integer orderId) {
-		this.orderId = orderId;
-	}
+//	public void setOrderId(Integer orderId) {
+//		this.orderId = orderId;
+//	}
 
 	public String getStatus() {
 		return status;
