@@ -17,4 +17,6 @@ public interface AdminServices {
 	
 	public AdminOrders updateDelveryStatus(String status,Integer id) throws Exception;
 	
+	public AdminOrders searchByOrderId(Integer id) throws Exception;
+	
 }

@@ -30,7 +30,7 @@ public class AdminController {
 		return new ResponseEntity<>(p,HttpStatus.ACCEPTED);
 	}
 	
-	
+	@GetMapping("/findProductById")
 	public  ResponseEntity<Product> findProductById (@PathVariable("id") Integer id) throws Exception{
 		return new ResponseEntity<>(psi.findProductById(id),HttpStatus.ACCEPTED);
 	}
@@ -57,6 +57,12 @@ public class AdminController {
 			,@PathVariable("id")Integer id) throws Exception{
 		return new ResponseEntity<>(psi.updateDelveryStatus(status, id),HttpStatus.ACCEPTED);
 	}
+	
+	@GetMapping("/searchByOrderId")
+	public ResponseEntity<AdminOrders> searchByOrderId(@PathVariable("id") Integer id) throws Exception{
+		return new ResponseEntity<>(psi.searchByOrderId(id),HttpStatus.ACCEPTED);
+	}
+	
 	
 	
 	

@@ -68,6 +68,15 @@ public class AdminServicesImpl implements AdminServices {
 	
 //	Search by user details remaining
 	
+	public AdminOrders searchByOrderId(Integer id) throws Exception {
+		Optional<AdminOrders> obj=aod.findById(id);
+		
+		if(obj.isEmpty()) {
+			throw new Exception();
+		}
+            return obj.get();
+		
+	}
 	
 	
 }
