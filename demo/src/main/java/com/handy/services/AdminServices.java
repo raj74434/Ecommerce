@@ -15,4 +15,6 @@ public interface AdminServices {
 	
 	public List<AdminOrders> getAllOrderRecevidfromUsers();
 	
+	public AdminOrders updateDelveryStatus(String status,Integer id) throws Exception;
+	
 }

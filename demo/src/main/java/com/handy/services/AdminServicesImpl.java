@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.handy.models.AdminOrders;
@@ -54,5 +55,19 @@ public class AdminServicesImpl implements AdminServices {
 		return aod.findAll();
 	}
 	
-
+	public AdminOrders updateDelveryStatus(String status,Integer id) throws Exception{
+		Optional<AdminOrders> p=aod.findById(id);
+		
+		if(p.isEmpty()) {
+			throw new Exception();
+		}
+		AdminOrders obj=p.get();
+		obj.setStatus(status);
+		return obj;
+	}
+	
+//	Search by user details remaining
+	
+	
+	
 }

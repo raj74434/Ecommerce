@@ -1,5 +1,6 @@
 package com.handy.models;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -28,10 +29,20 @@ public class AdminOrders {
 	
 	private String refund;
 
+	private LocalDate date;
 	
 	
 	
 	
+	
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+
 	public Integer getOrderId() {
 		return orderId;
 	}

@@ -20,4 +20,6 @@ public class Orders {
 	
 	private Integer bill;
 	
+	private String status;
+	
 }
