@@ -18,7 +18,7 @@ import com.handy.models.Product;
 import com.handy.services.AdminServicesImpl;
 
 @RestController
-@RequestMapping("admin")
+@RequestMapping("/admin")
 public class AdminController {
 
 	@Autowired

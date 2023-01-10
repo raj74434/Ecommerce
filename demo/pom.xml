@@ -53,6 +53,13 @@
     <version>1.6.13</version>
 </dependency>
 
+<!--  Spring sequrity -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+    <version>2.6.8</version>
+</dependency>
+
 	</dependencies>
 
 	<build>
