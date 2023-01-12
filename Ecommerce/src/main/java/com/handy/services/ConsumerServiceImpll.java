@@ -23,14 +23,14 @@ public class ConsumerServiceImpll implements ConsumerService {
 	@Autowired
 	private ProductDao productDao;
 	
-	@Autowired
-	private Orders orders;
+//	@Autowired
+//	private Orders orders;
 	
-	@Autowired
-	private Cart cart;
+//	@Autowired
+//	private Cart cart;
 	
-	@Autowired
-	private ProductConsumer productConsumer;
+//	@Autowired
+//	private ProductConsumer productConsumer;
 	
 	
 	public Consumer findById(Integer id) throws Exception {
@@ -44,6 +44,7 @@ public class ConsumerServiceImpll implements ConsumerService {
 	
 //	@Override
 	public Consumer registerConsumer(Consumer consumer) {
+		Cart cart =new Cart();
 		
 		consumer.setCart(cart);;
 		
@@ -74,6 +75,8 @@ public Product searchProductById(Integer id) throws Exception{
 	}
 	
 	public Cart  addInCart(Integer id ,Product product , Integer quantity) throws Exception {
+		
+		ProductConsumer productConsumer=new ProductConsumer();
 		
 		productConsumer.setCategory(product.getCategory());
 		productConsumer.setPrice(product.getPrice()*quantity);
